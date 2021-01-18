@@ -1,0 +1,7 @@
+{
+    "srv_glb@waf-ins_cn-north-1_7a172aa9704a": 0,
+    "srv_glb@waf-ins_cn-north-1_ecc346c2f5c8": 0,
+    "test.com@waf-ins_cn-north-1_7a172aa9704a": 1,
+    "waf.jdtest.com@waf-ins_cn-north-1_ecc346c2f5c8": 1,
+    "waf1.test.com@waf-ins_cn-north-1_7a172aa9704a": 0
+}

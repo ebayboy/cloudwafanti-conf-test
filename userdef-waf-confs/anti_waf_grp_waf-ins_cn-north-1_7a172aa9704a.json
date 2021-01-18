@@ -1,0 +1,47 @@
+{
+    "srv_glb": {
+        "waf": {
+            "lvl": "0",
+            "action": "forbidden",
+            "libinj": "off",
+            "libinjaction": "",
+            "enable": 0,
+            "conditions": {},
+            "acl": null,
+            "acl_default_action": ""
+        },
+        "ratelimit": {
+            "enable": 0
+        }
+    },
+    "test.com": {
+        "waf": {
+            "lvl": "3",
+            "action": "forbidden",
+            "libinj": "off",
+            "libinjaction": "notice",
+            "enable": 0,
+            "conditions": {},
+            "acl": null,
+            "acl_default_action": ""
+        },
+        "ratelimit": {
+            "enable": 0
+        }
+    },
+    "waf1.test.com": {
+        "waf": {
+            "lvl": "0",
+            "action": "forbidden",
+            "libinj": "off",
+            "libinjaction": "",
+            "enable": 0,
+            "conditions": {},
+            "acl": null,
+            "acl_default_action": ""
+        },
+        "ratelimit": {
+            "enable": 0
+        }
+    }
+}

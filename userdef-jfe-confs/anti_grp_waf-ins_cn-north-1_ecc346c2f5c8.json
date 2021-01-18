@@ -1,0 +1,54 @@
+{
+    "enable": 1,
+    "waf.jdtest.com": {
+        "bot": {
+            "eigenv": {
+                "enable": 0
+            },
+            "count": {
+                "enable": 0
+            },
+            "analyze": {
+                "level": "L0",
+                "format": "host_ip",
+                "action": "forbidden"
+            }
+        },
+        "cc": {
+            "count": {
+                "enable": 0
+            },
+            "analyze": {
+                "level": "L0",
+                "format": "all"
+            }
+        },
+        "deny": {
+            "enable": 0
+        },
+        "enable": 1,
+        "filter": {
+            "enable": 0,
+            "respBody": {}
+        },
+        "grconf": {},
+        "html": {},
+        "ratelimit": {
+            "enable": 0
+        },
+        "risk": {
+            "enable": 0
+        },
+        "skip": {
+            "enable": 0
+        },
+        "waf": {
+            "enable": 1,
+            "analyze": {
+                "level": "L0",
+                "format": "host_ip",
+                "action": "forbidden"
+            }
+        }
+    }
+}

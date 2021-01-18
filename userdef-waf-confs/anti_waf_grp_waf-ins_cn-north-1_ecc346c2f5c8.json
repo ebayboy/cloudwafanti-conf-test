@@ -1,0 +1,32 @@
+{
+    "srv_glb": {
+        "waf": {
+            "lvl": "0",
+            "action": "forbidden",
+            "libinj": "off",
+            "libinjaction": "",
+            "enable": 0,
+            "conditions": {},
+            "acl": null,
+            "acl_default_action": ""
+        },
+        "ratelimit": {
+            "enable": 0
+        }
+    },
+    "waf.jdtest.com": {
+        "waf": {
+            "lvl": "1",
+            "action": "notice",
+            "libinj": "off",
+            "libinjaction": "notice",
+            "enable": 0,
+            "conditions": {},
+            "acl": null,
+            "acl_default_action": ""
+        },
+        "ratelimit": {
+            "enable": 0
+        }
+    }
+}

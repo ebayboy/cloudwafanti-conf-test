@@ -1,0 +1,12 @@
+
+{
+  "GroupIdQpsLimit": 1000,
+  "HostIpQpsLimit": 1000,
+  "HostIpUriAbnormal499QpsLimit": 50,
+  "HostIpUriQpsLimit": 100,
+  "HostQpsLimit": 50000,
+  "HostUriQpsLimit": 20000,
+  "HostUriStatus5XXLimit": 500,
+  "HostUriStatus5XXPercentLimit": 30,
+  "HostIpForbiddenLimit": 50
+}

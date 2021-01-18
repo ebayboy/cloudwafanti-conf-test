@@ -1,0 +1,37 @@
+{
+    "acl": {
+        "enable": 0,
+        "rules": [
+            {
+                "action": 1,
+                "conditions": [],
+                "continueComponents": {
+                    "postCc": 1,
+                    "postWaf": 1
+                },
+                "isDefault": 1,
+                "name": "default",
+                "order": 99999
+            }
+        ]
+    },
+    "antiSpider": {
+        "enable": 0
+    },
+    "ccAnti": {
+        "enable": 0,
+        "ccMode": 0,
+        "enableUserDefine": 0
+    },
+    "domain": "test.com",
+    "group": "waf-ins_cn-north-1_7a172aa9704a",
+    "ipban": {
+        "enable": 0
+    },
+    "wafAnti": {
+        "enable": 1,
+        "wafMode": 0,
+        "redirection": "",
+        "wafLevel": 2
+    }
+}

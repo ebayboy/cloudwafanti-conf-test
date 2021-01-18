@@ -1,0 +1,216 @@
+{
+    "enable": 1,
+    "test.com": {
+        "bot": {
+            "eigenv": {
+                "enable": 1
+            },
+            "count": {
+                "enable": 1
+            },
+            "analyze": {
+                "level": "L0",
+                "format": "host_ip",
+                "action": "forbidden"
+            }
+        },
+        "cc": {
+            "count": {
+                "enable": 0
+            },
+            "analyze": {
+                "level": "L0",
+                "format": "all"
+            }
+        },
+        "deny": {
+            "enable": 0
+        },
+        "enable": 1,
+        "filter": {
+            "enable": 1,
+            "respBody": {}
+        },
+        "grconf": {},
+        "html": {},
+        "ratelimit": {
+            "enable": 0
+        },
+        "risk": {
+            "enable": 1,
+            "rules": {
+                "/4444": {
+                    "event": {
+                        "passwd": "JSON_BODY.passwd",
+                        "session": "ARGS_BODY.session",
+                        "username": "ARGS.username"
+                    },
+                    "sceneRef": "account_register",
+                    "methods": {
+                        "GET": 1,
+                        "POST": 1
+                    },
+                    "action": "forbidden@test555555"
+                },
+                "/test111": {
+                    "event": {
+                        "passwd": "JSON_BODY.passwd",
+                        "session": "ARGS_BODY.session",
+                        "username": "ARGS.username"
+                    },
+                    "sceneRef": "account_register111",
+                    "methods": {
+                        "GET": 1,
+                        "POST": 1
+                    },
+                    "action": "notice"
+                },
+                "/test222": {
+                    "event": {
+                        "passwd": "JSON_BODY.passwd",
+                        "session": "ARGS_BODY.session",
+                        "username": "ARGS.username"
+                    },
+                    "sceneRef": "account_register111",
+                    "methods": {
+                        "GET": 1,
+                        "POST": 1
+                    },
+                    "action": "notice"
+                },
+                "/test333": {
+                    "event": {
+                        "passwd": "JSON_BODY.passwd",
+                        "session": "ARGS_BODY.session",
+                        "username": "ARGS.username"
+                    },
+                    "sceneRef": "account_register111",
+                    "methods": {
+                        "GET": 1,
+                        "POST": 1
+                    },
+                    "action": "notice"
+                },
+                "/testmid": {
+                    "event": {
+                        "passwd": "JSON_BODY.passwd",
+                        "session": "ARGS_BODY.session",
+                        "username": "ARGS.username"
+                    },
+                    "sceneRef": "account_register111",
+                    "methods": {
+                        "GET": 1,
+                        "POST": 1
+                    },
+                    "action": "notice"
+                },
+                "/testmid11": {
+                    "event": {
+                        "passwd": "JSON_BODY.passwd",
+                        "username": "ARGS.username"
+                    },
+                    "sceneRef": "account_login",
+                    "methods": {
+                        "POST": 1
+                    },
+                    "action": "notice"
+                },
+                "/testmid22": {
+                    "event": {
+                        "passwd": "JSON_BODY.passwd",
+                        "username": "ARGS.username"
+                    },
+                    "sceneRef": "account_login",
+                    "methods": {
+                        "POST": 1
+                    },
+                    "action": "notice"
+                },
+                "/testmid33": {
+                    "event": {
+                        "passwd": "JSON_BODY.passwd",
+                        "username": "ARGS.username"
+                    },
+                    "sceneRef": "account_login",
+                    "methods": {
+                        "POST": 1
+                    },
+                    "action": "notice"
+                },
+                "/testmid44": {
+                    "event": {
+                        "passwd": "JSON_BODY.passwd",
+                        "username": "ARGS.username"
+                    },
+                    "sceneRef": "account_login",
+                    "methods": {
+                        "POST": 1
+                    },
+                    "action": "notice"
+                }
+            }
+        },
+        "skip": {
+            "enable": 0
+        },
+        "waf": {
+            "enable": 1,
+            "analyze": {
+                "level": "L0",
+                "format": "host_ip",
+                "action": "forbidden"
+            }
+        }
+    },
+    "waf1.test.com": {
+        "bot": {
+            "eigenv": {
+                "enable": 0
+            },
+            "count": {
+                "enable": 0
+            },
+            "analyze": {
+                "level": "L0",
+                "format": "host_ip",
+                "action": "forbidden"
+            }
+        },
+        "cc": {
+            "count": {
+                "enable": 0
+            },
+            "analyze": {
+                "level": "L0",
+                "format": "all"
+            }
+        },
+        "deny": {
+            "enable": 0
+        },
+        "enable": 1,
+        "filter": {
+            "enable": 0,
+            "respBody": {}
+        },
+        "grconf": {},
+        "html": {},
+        "ratelimit": {
+            "enable": 0
+        },
+        "risk": {
+            "enable": 0
+        },
+        "skip": {
+            "enable": 0
+        },
+        "waf": {
+            "enable": 0,
+            "analyze": {
+                "level": "L0",
+                "format": "host_ip",
+                "action": "forbidden"
+            }
+        }
+    }
+}
