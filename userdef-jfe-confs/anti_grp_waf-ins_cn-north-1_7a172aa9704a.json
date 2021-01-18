@@ -50,7 +50,8 @@
                         "GET": 1,
                         "POST": 1
                     },
-                    "action": "forbidden@test555555"
+                    "action": "forbidden@test555555",
+                    "vars": {}
                 },
                 "/test111": {
                     "event": {
@@ -63,7 +64,8 @@
                         "GET": 1,
                         "POST": 1
                     },
-                    "action": "notice"
+                    "action": "notice",
+                    "vars": {}
                 },
                 "/test222": {
                     "event": {
@@ -76,7 +78,8 @@
                         "GET": 1,
                         "POST": 1
                     },
-                    "action": "notice"
+                    "action": "notice",
+                    "vars": {}
                 },
                 "/test333": {
                     "event": {
@@ -89,7 +92,8 @@
                         "GET": 1,
                         "POST": 1
                     },
-                    "action": "notice"
+                    "action": "notice",
+                    "vars": {}
                 },
                 "/testmid": {
                     "event": {
@@ -102,7 +106,8 @@
                         "GET": 1,
                         "POST": 1
                     },
-                    "action": "notice"
+                    "action": "notice",
+                    "vars": {}
                 },
                 "/testmid11": {
                     "event": {
@@ -113,7 +118,8 @@
                     "methods": {
                         "POST": 1
                     },
-                    "action": "notice"
+                    "action": "notice",
+                    "vars": {}
                 },
                 "/testmid22": {
                     "event": {
@@ -124,7 +130,8 @@
                     "methods": {
                         "POST": 1
                     },
-                    "action": "notice"
+                    "action": "notice",
+                    "vars": {}
                 },
                 "/testmid33": {
                     "event": {
@@ -135,7 +142,8 @@
                     "methods": {
                         "POST": 1
                     },
-                    "action": "notice"
+                    "action": "notice",
+                    "vars": {}
                 },
                 "/testmid44": {
                     "event": {
@@ -146,7 +154,8 @@
                     "methods": {
                         "POST": 1
                     },
-                    "action": "notice"
+                    "action": "notice",
+                    "vars": {}
                 }
             }
         },
