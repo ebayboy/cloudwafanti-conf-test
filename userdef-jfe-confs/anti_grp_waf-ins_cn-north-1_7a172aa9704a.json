@@ -39,123 +39,47 @@
         "risk": {
             "enable": 1,
             "rules": {
-                "/4444": {
-                    "event": {
-                        "passwd": "JSON_BODY.passwd",
-                        "session": "ARGS_BODY.session",
-                        "username": "ARGS.username"
-                    },
-                    "sceneRef": "account_register",
+                "/test.html": {
                     "methods": {
                         "GET": 1,
                         "POST": 1
                     },
-                    "action": "forbidden@test555555",
                     "vars": {}
                 },
-                "/test111": {
+                "/test111.html": {
                     "event": {
-                        "passwd": "JSON_BODY.passwd",
-                        "session": "ARGS_BODY.session",
-                        "username": "ARGS.username"
+                        "account": "ARGS.account",
+                        "keyphone": "COOKIE.keyphone"
                     },
-                    "sceneRef": "account_register111",
                     "methods": {
                         "GET": 1,
                         "POST": 1
                     },
-                    "action": "notice",
-                    "vars": {}
-                },
-                "/test222": {
-                    "event": {
-                        "passwd": "JSON_BODY.passwd",
-                        "session": "ARGS_BODY.session",
-                        "username": "ARGS.username"
-                    },
-                    "sceneRef": "account_register111",
-                    "methods": {
-                        "GET": 1,
-                        "POST": 1
-                    },
-                    "action": "notice",
-                    "vars": {}
-                },
-                "/test333": {
-                    "event": {
-                        "passwd": "JSON_BODY.passwd",
-                        "session": "ARGS_BODY.session",
-                        "username": "ARGS.username"
-                    },
-                    "sceneRef": "account_register111",
-                    "methods": {
-                        "GET": 1,
-                        "POST": 1
-                    },
-                    "action": "notice",
-                    "vars": {}
-                },
-                "/testmid": {
-                    "event": {
-                        "passwd": "JSON_BODY.passwd",
-                        "session": "ARGS_BODY.session",
-                        "username": "ARGS.username"
-                    },
-                    "sceneRef": "account_register111",
-                    "methods": {
-                        "GET": 1,
-                        "POST": 1
-                    },
-                    "action": "notice",
-                    "vars": {}
-                },
-                "/testmid11": {
-                    "event": {
-                        "passwd": "JSON_BODY.passwd",
-                        "username": "ARGS.username"
-                    },
-                    "sceneRef": "account_login",
-                    "methods": {
-                        "POST": 1
-                    },
-                    "action": "notice",
-                    "vars": {}
-                },
-                "/testmid22": {
-                    "event": {
-                        "passwd": "JSON_BODY.passwd",
-                        "username": "ARGS.username"
-                    },
-                    "sceneRef": "account_login",
-                    "methods": {
-                        "POST": 1
-                    },
-                    "action": "notice",
-                    "vars": {}
-                },
-                "/testmid33": {
-                    "event": {
-                        "passwd": "JSON_BODY.passwd",
-                        "username": "ARGS.username"
-                    },
-                    "sceneRef": "account_login",
-                    "methods": {
-                        "POST": 1
-                    },
-                    "action": "notice",
-                    "vars": {}
-                },
-                "/testmid44": {
-                    "event": {
-                        "passwd": "JSON_BODY.passwd",
-                        "username": "ARGS.username"
-                    },
-                    "sceneRef": "account_login",
-                    "methods": {
-                        "POST": 1
-                    },
-                    "action": "notice",
-                    "vars": {}
+                    "policy": [
+                        {
+                            "name": "账号监控",
+                            "script": "risk_blk_contain(EVENT.phone,f3035722-4f03-11eb-b82a-000c297308bb) and adca6bc4-4f0a-11eb-b82a-000c297308bb > 10 and adca6bc4-4f0a-11eb-b82a-000c297308bb == 0 and (vGID#vHST#SUM#total#5m > 100 or REMOTE_ADDR == '192.168.137.101')",
+                            "action": "forbidden"
+                        },
+                        {
+                            "name": "posman",
+                            "script": "risk_blk_contain(EVENT.phone,f3035722-4f03-11eb-b82a-000c297308bb) and adca6bc4-4f0a-11eb-b82a-000c297308bb > 10 and adca6bc4-4f0a-11eb-b82a-000c297308bb == 0 and (vGID#vHST#SUM#total#5m > 100 or REMOTE_ADDR == '192.168.137.101')",
+                            "action": "forbidden"
+                        }
+                    ],
+                    "action": "forbidden@testfb",
+                    "vars": {
+                        "counts": [
+                            {
+                                "name": "事件统计变量-1分钟phone的数量",
+                                "uri": "/test111.html",
+                                "ip": "Event.phone",
+                                "dura": 60,
+                                "thrsd": 1,
+                                "action": "forbidden"
+                            }
+                        ]
+                    }
                 }
             }
         },
