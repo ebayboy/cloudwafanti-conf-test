@@ -38,6 +38,14 @@
         },
         "risk": {
             "enable": 1,
+            "blacklist": {
+                "blackaccount": {
+                    "13211112222": "1",
+                    "13311112222": "1",
+                    "2222222": "1",
+                    "3333333": "1"
+                }
+            },
             "rules": {
                 "/test.html": {
                     "methods": {
@@ -59,15 +67,15 @@
                         {
                             "name": "账号监控",
                             "script": "risk_blk_contain(EVENT.phone,f3035722-4f03-11eb-b82a-000c297308bb) and adca6bc4-4f0a-11eb-b82a-000c297308bb > 10 and adca6bc4-4f0a-11eb-b82a-000c297308bb == 0 and (vGID#vHST#SUM#total#5m > 100 or REMOTE_ADDR == '192.168.137.101')",
-                            "action": "forbidden"
+                            "action": "forbidden@testpage"
                         },
                         {
                             "name": "posman",
                             "script": "risk_blk_contain(EVENT.phone,f3035722-4f03-11eb-b82a-000c297308bb) and adca6bc4-4f0a-11eb-b82a-000c297308bb > 10 and adca6bc4-4f0a-11eb-b82a-000c297308bb == 0 and (vGID#vHST#SUM#total#5m > 100 or REMOTE_ADDR == '192.168.137.101')",
-                            "action": "forbidden"
+                            "action": "forbidden@testfb"
                         }
                     ],
-                    "action": "forbidden@testfb",
+                    "action": "verify@captcha2",
                     "vars": {
                         "counts": [
                             {
@@ -132,7 +140,8 @@
             "enable": 0
         },
         "risk": {
-            "enable": 0
+            "enable": 0,
+            "blacklist": null
         },
         "skip": {
             "enable": 0

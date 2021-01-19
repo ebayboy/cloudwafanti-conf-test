@@ -37,7 +37,8 @@
             "enable": 0
         },
         "risk": {
-            "enable": 0
+            "enable": 0,
+            "blacklist": null
         },
         "skip": {
             "enable": 0
