@@ -66,7 +66,7 @@
                     "policy": [
                         {
                             "name": "账号监控",
-                            "script": "risk_blk_contain(blackphone,EVENT.phone) and COUNTRISK.online_phone_1m > 10 and  and (grp_vGID_vHST_SUM_total_5m > 100 or REMOTE_ADDR == '192.168.137.101')",
+                            "script": "risk_blk_contain(blackphone,EVENT.phone) and COUNTRISK.online_phone_1m > 10 and grp_vGID_vHST_vRIP == 0 and (grp_vGID_vHST_SUM_total_5m > 100 or REMOTE_ADDR == '192.168.137.101')",
                             "action": "forbidden@testpage"
                         }
                     ],
