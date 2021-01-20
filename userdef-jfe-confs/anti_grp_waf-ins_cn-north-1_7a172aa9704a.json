@@ -76,7 +76,7 @@
                             {
                                 "name": "online_phone_1m",
                                 "uri": "/test111.html",
-                                "ip": "Event.phone",
+                                "unit": "Event.phone",
                                 "dura": 60,
                                 "thrsd": 1,
                                 "action": "forbidden"
