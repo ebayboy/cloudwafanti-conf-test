@@ -66,12 +66,12 @@
                     "policy": [
                         {
                             "name": "账号监控",
-                            "script": "risk_blk_contain(f3035722-4f03-11eb-b82a-000c297308bb,EVENT.phone) and adca6bc4-4f0a-11eb-b82a-000c297308bb > 10 and adca6bc4-4f0a-11eb-b82a-000c297308bb == 0 and (vGID#vHST#SUM#total#5m > 100 or REMOTE_ADDR == '192.168.137.101')",
+                            "script": "risk_blk_contain(blackphone,EVENT.phone) and online_phone_1m > 10 and offline_404_ratio == 0 and (vGID#vHST#SUM#total#5m > 100 or REMOTE_ADDR == '192.168.137.101')",
                             "action": "forbidden@testpage"
                         },
                         {
                             "name": "posman",
-                            "script": "risk_blk_contain(f3035722-4f03-11eb-b82a-000c297308bb,EVENT.phone) and adca6bc4-4f0a-11eb-b82a-000c297308bb > 10 and adca6bc4-4f0a-11eb-b82a-000c297308bb == 0 and (vGID#vHST#SUM#total#5m > 100 or REMOTE_ADDR == '192.168.137.101')",
+                            "script": "risk_blk_contain(blackphone,EVENT.phone) and online_phone_1m > 10 and offline_404_ratio == 0 and (vGID#vHST#SUM#total#5m > 100 or REMOTE_ADDR == '192.168.137.101')",
                             "action": "forbidden@testfb"
                         }
                     ],
