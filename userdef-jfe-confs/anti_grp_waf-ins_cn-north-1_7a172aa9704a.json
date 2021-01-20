@@ -79,7 +79,7 @@
                     "vars": {
                         "counts": [
                             {
-                                "name": "事件统计变量-1分钟phone的数量",
+                                "name": "online_phone_1m",
                                 "uri": "/test111.html",
                                 "ip": "Event.phone",
                                 "dura": 60,
