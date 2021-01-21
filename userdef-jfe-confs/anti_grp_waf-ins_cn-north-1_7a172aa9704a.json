@@ -48,45 +48,37 @@
             },
             "rules": {
                 "/redirect": {
-                    "event": {
-                        "passwd": "BODY.password",
-                        "username": "BODY.user"
-                    },
-                    "sceneRef": "data_risk_control",
                     "methods": {
                         "GET": 1,
                         "POST": 1
                     },
-                    "action": "redirect@http://www.t.ir0.cn/302.html",
-                    "vars": {}
+                    "event": {
+                        "passwd": "BODY.password",
+                        "username": "BODY.user"
+                    },
+                    "vars": {},
+                    "sceneRef": "data_risk_control",
+                    "action": "redirect@http://www.t.ir0.cn/302.html"
                 },
                 "/test.html": {
                     "methods": {
                         "GET": 1,
                         "POST": 1
                     },
-                    "action": "verify@captcha2",
-                    "vars": {}
+                    "vars": {},
+                    "action": "verify@captcha2"
                 },
                 "/test111.html": {
+                    "methods": {
+                        "GET": 1,
+                        "POST": 1
+                    },
                     "event": {
                         "account": "ARGS.account",
                         "body": "BODY.body",
                         "cookie": "COOKIE.cookie",
                         "phone": "HEADER.phone"
                     },
-                    "methods": {
-                        "GET": 1,
-                        "POST": 1
-                    },
-                    "policy": [
-                        {
-                            "name": "账号监控",
-                            "script": "risk_blk_contain(blackphone,EVENT.phone) and COUNTRISK.online_phone_1m > 10 and grp_vGID_vHST_vRIP_offline_404_ratio == 0 and (grp_vGID_vHST_SUM_total_5m > 100 or REMOTE_ADDR == '192.168.137.101')",
-                            "action": "forbidden@testpage"
-                        }
-                    ],
-                    "action": "verify@captcha2",
                     "vars": {
                         "counts": [
                             {
@@ -98,7 +90,15 @@
                                 "action": "forbidden"
                             }
                         ]
-                    }
+                    },
+                    "policy": [
+                        {
+                            "name": "账号监控",
+                            "script": "risk_blk_contain(blackphone,EVENT.phone) and COUNTRISK.online_phone_1m > 10 and grp_vGID_vHST_vRIP_offline_404_ratio == 0 and (grp_vGID_vHST_SUM_total_5m > 100 or REMOTE_ADDR == '192.168.137.101')",
+                            "action": "forbidden@testpage"
+                        }
+                    ],
+                    "action": "verify@captcha2"
                 }
             }
         },
