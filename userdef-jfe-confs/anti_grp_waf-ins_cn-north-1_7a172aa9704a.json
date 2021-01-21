@@ -65,6 +65,7 @@
                         "GET": 1,
                         "POST": 1
                     },
+                    "action": "verify@captcha2",
                     "vars": {}
                 },
                 "/test111.html": {
