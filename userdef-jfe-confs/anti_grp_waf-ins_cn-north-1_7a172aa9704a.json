@@ -49,8 +49,8 @@
             "rules": {
                 "/redirect": {
                     "event": {
-                        "passwd": "ARGS_JSON.password",
-                        "username": "ARGS_JSON.user"
+                        "passwd": "BODY.password",
+                        "username": "BODY.user"
                     },
                     "sceneRef": "acount_login",
                     "methods": {
