@@ -56,8 +56,7 @@
                 },
                 "/test111.html": {
                     "event": {
-                        "account": "ARGS.account",
-                        "keyphone": "COOKIE.keyphone"
+                        "account": "ARGS.account"
                     },
                     "methods": {
                         "GET": 1,
