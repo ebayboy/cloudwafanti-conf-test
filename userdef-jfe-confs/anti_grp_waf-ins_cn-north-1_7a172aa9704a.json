@@ -56,7 +56,10 @@
                 },
                 "/test111.html": {
                     "event": {
-                        "account": "ARGS.account"
+                        "account": "ARGS.account",
+                        "body": "ARGS_BODY.body",
+                        "cookie": "COOKIE.cookie",
+                        "phone": "HEADER.phone"
                     },
                     "methods": {
                         "GET": 1,
