@@ -69,7 +69,7 @@
                 "/test111.html": {
                     "event": {
                         "account": "ARGS.account",
-                        "body": "ARGS_BODY.body",
+                        "body": "BODY.body",
                         "cookie": "COOKIE.cookie",
                         "phone": "HEADER.phone"
                     },
