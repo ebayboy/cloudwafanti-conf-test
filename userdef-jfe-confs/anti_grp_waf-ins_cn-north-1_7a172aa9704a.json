@@ -52,8 +52,9 @@
                         "passwd": "BODY.password",
                         "username": "BODY.user"
                     },
-                    "sceneRef": "acount_login",
+                    "sceneRef": "data_risk_control",
                     "methods": {
+                        "GET": 1,
                         "POST": 1
                     },
                     "action": "redirect@http://www.t.ir0.cn/302.html",
