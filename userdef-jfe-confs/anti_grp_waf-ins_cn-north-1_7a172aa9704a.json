@@ -47,6 +47,18 @@
                 }
             },
             "rules": {
+                "/redirect": {
+                    "event": {
+                        "passwd": "ARGS_JSON.password",
+                        "username": "ARGS_JSON.user"
+                    },
+                    "sceneRef": "acount_login",
+                    "methods": {
+                        "POST": 1
+                    },
+                    "action": "redirect@http://www.t.ir0.cn/302.html",
+                    "vars": {}
+                },
                 "/test.html": {
                     "methods": {
                         "GET": 1,
