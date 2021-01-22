@@ -1,18 +1,8 @@
 {
     "srv_glb": {
-        "vars": null,
-        "policys": {
-            "Name": "",
-            "Logic": "",
-            "Rules": null
-        }
+        "policys": {}
     },
     "waf.jdtest.com": {
-        "vars": null,
-        "policys": {
-            "Name": "",
-            "Logic": "",
-            "Rules": null
-        }
+        "policys": {}
     }
 }

@@ -1,26 +1,11 @@
 {
     "srv_glb": {
-        "vars": null,
-        "policys": {
-            "Name": "",
-            "Logic": "",
-            "Rules": null
-        }
+        "policys": {}
     },
     "test.com": {
-        "vars": null,
-        "policys": {
-            "Name": "",
-            "Logic": "",
-            "Rules": null
-        }
+        "policys": {}
     },
     "waf1.test.com": {
-        "vars": null,
-        "policys": {
-            "Name": "",
-            "Logic": "",
-            "Rules": null
-        }
+        "policys": {}
     }
 }
