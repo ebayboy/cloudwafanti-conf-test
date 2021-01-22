@@ -1,0 +1,11 @@
+{
+    "policys": [
+        {
+            "name": "grp_vGID#vHST#vRIP",
+            "rules": [
+                "vGID#vHST#vRIP#SUM#total#5m/vGID#vHST#SUM#total#5m\u003e0.5",
+                "vGID#vHST#vRIP#SUM#total#5m\u003e100"
+            ]
+        }
+    ]
+}
