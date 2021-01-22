@@ -1,7 +1,7 @@
 {
     "policys": [
         {
-            "name": "grp_vGID#vHST#vRIP",
+            "name": "grp_vGID#vHST#vRIP#offline_404_ratio",
             "rules": [
                 "vGID#vHST#vRIP#SUM#total#5m/vGID#vHST#SUM#total#5m\u003e0.5",
                 "vGID#vHST#vRIP#SUM#total#5m\u003e100"
