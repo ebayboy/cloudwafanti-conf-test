@@ -1,8 +1,0 @@
-{
-    "srv_glb": {
-        "policys": {}
-    },
-    "waf.jdtest.com": {
-        "policys": {}
-    }
-}
