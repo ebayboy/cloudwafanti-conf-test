@@ -6,6 +6,12 @@
                 "vGID#vHST#vRIP#SUM#total#5m/vGID#vHST#SUM#total#5m\u003e0.5",
                 "vGID#vHST#vRIP#SUM#total#5m\u003e5"
             ]
+        },
+        {
+            "name": "grp_vGID#vHST#SUM#total#5m",
+            "rules": [
+                "vGID#vHST#SUM#total#5m\u003e100"
+            ]
         }
     ]
 }
