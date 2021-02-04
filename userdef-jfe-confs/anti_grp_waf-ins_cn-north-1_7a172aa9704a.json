@@ -117,12 +117,12 @@
                     },
                     "policy": [
                         {
-                            "name": "账号监控",
+                            "name": "new111",
                             "script": "risk_blk_contain(blackphone,EVENT.phone) and COUNTRISK.online_phone_1m > 10 and grp_vGID_vHST_vRIP_offline_404_ratio == 0 and (grp_vGID_vHST_SUM_total_5m > 10 or grp_vGID_vHST_vRIP_SUM_total_5m > 3 or REMOTE_ADDR == '192.168.137.101')",
-                            "action": "forbidden@testpage"
+                            "action": "forbidden@testfb"
                         },
                         {
-                            "name": "new111",
+                            "name": "new222",
                             "script": "risk_blk_contain(blackphone,EVENT.phone) and COUNTRISK.online_phone_1m > 10 and grp_vGID_vHST_vRIP_offline_404_ratio == 0 and (grp_vGID_vHST_SUM_total_5m > 10 or grp_vGID_vHST_vRIP_SUM_total_5m > 3 or REMOTE_ADDR == '192.168.137.101')",
                             "action": "forbidden@testfb"
                         }
