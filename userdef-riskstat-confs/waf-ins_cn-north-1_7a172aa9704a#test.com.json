@@ -18,18 +18,6 @@
             "rules": [
                 "vGID#vHST#vRIP#SUM#total#5m\u003e3"
             ]
-        },
-        {
-            "name": "grp_vGID#vHST#SUM#total#5m",
-            "rules": [
-                "vGID#vHST#SUM#total#5m\u003e10"
-            ]
-        },
-        {
-            "name": "grp_vGID#vHST#vRIP#SUM#total#5m",
-            "rules": [
-                "vGID#vHST#vRIP#SUM#total#5m\u003e3"
-            ]
         }
     ]
 }
