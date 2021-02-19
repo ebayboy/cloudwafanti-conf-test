@@ -15,7 +15,7 @@
                         "dura": 20,
                         "thrsd": 300,
                         "action": "forbidden@",
-                        "script": "contain(HEADER.user_agent, 'bot') && bettween('Wday', 5,2 and between('Hour', 21, 10))) && between('Hour', 21, 10))",
+                        "script": "contain(HEADER.user_agent, 'bot') && bettween('Wday', 5,2)) && between('Hour', 21, 10))",
                         "ststhrst": 150,
                         "status": 404
                     }
