@@ -3,10 +3,68 @@
     "waf.jdtest.com": {
         "bot": {
             "eigenv": {
-                "enable": 0
+                "enable": 1
             },
             "count": {
-                "enable": 0
+                "enable": 1,
+                "rules": [
+                    {
+                        "name": "botstat1",
+                        "uri": "/vulnerabilities/xss_s/",
+                        "unit": "",
+                        "dura": 1,
+                        "thrsd": 1,
+                        "action": "notice",
+                        "script": "(HEADER.fingerExist, '') && (HEADER.fingerValid, '')"
+                    },
+                    {
+                        "name": "testbot2",
+                        "pre": {
+                            "ARGS.x_ufid == ''": "forbidden",
+                            "jfe_xsec()": "forbidden"
+                        },
+                        "uri": "/vulnerabilities/xss_s/",
+                        "unit": "",
+                        "dura": 20,
+                        "thrsd": 300,
+                        "action": "notice"
+                    },
+                    {
+                        "name": "testbot",
+                        "pre": {
+                            "ARGS.x_ufid == ''": "forbidden",
+                            "jfe_xsec()": "forbidden"
+                        },
+                        "uri": "/vulnerabilities/xss_s/",
+                        "unit": "",
+                        "dura": 1,
+                        "thrsd": 1,
+                        "action": "notice"
+                    },
+                    {
+                        "name": "test",
+                        "pre": {
+                            "ARGS.x_ufid == ''": "forbidden",
+                            "jfe_xsec()": "forbidden"
+                        },
+                        "uri": "/service/app/sites.php",
+                        "unit": "",
+                        "dura": 60,
+                        "thrsd": 5,
+                        "action": "forbidden@"
+                    },
+                    {
+                        "name": "1111",
+                        "uri": "/fb.html",
+                        "unit": "args.xss_s",
+                        "dura": 20,
+                        "thrsd": 300,
+                        "action": "forbidden@",
+                        "script": "contain(HEADER.user_agent, 'bot')",
+                        "ststhrst": 100,
+                        "status": 404
+                    }
+                ]
             },
             "analyze": {
                 "level": "L0",
@@ -28,8 +86,15 @@
         },
         "enable": 1,
         "filter": {
-            "enable": 0,
-            "respBody": {}
+            "enable": 1,
+            "respBody": {
+                "append": {
+                    "/service/app/sites.php": "/ZmluZ2VycHJpbnRfanM.js?t=",
+                    "/test": "/ZmluZ2VycHJpbnRfanM.js?t=",
+                    "/vulnerabilities/captcha/": "/ZmluZ2VycHJpbnRfanM.js?t=",
+                    "sw@/": "/ZmluZ2VycHJpbnRfanM.js?t="
+                }
+            }
         },
         "grconf": {},
         "html": {},
@@ -37,8 +102,7 @@
             "enable": 0
         },
         "risk": {
-            "enable": 0,
-            "blacklist": null
+            "enable": 1
         },
         "skip": {
             "enable": 0

@@ -3,9 +3,7 @@
         "scene": {
             "account_login": {
                 "default": "HEADER.referer == '' or HEADER.user_agent == '' or JJSRISK.PTT < 2000 or (JJSRISK.MTC + JJSRISK.KTC) < 4"
-            },
-            "account_register": null,
-            "data_risk_control": null
+            }
         }
     },
     "bots": {}

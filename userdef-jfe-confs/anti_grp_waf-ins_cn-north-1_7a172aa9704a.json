@@ -37,99 +37,7 @@
             "enable": 0
         },
         "risk": {
-            "enable": 1,
-            "blacklist": {
-                "111111": {
-                    "13211112222": "1",
-                    "13311112222": "1",
-                    "2222222": "1",
-                    "3333333": "1"
-                },
-                "22222": {
-                    "13211112222": "1",
-                    "13311112222": "1",
-                    "2222222": "1",
-                    "3333333": "1"
-                },
-                "blackaccount": {
-                    "13211112222": "1",
-                    "13311112222": "1",
-                    "2222222": "1",
-                    "3333333": "1"
-                },
-                "whitelist": {
-                    "13211112222": "1",
-                    "13311112222": "1",
-                    "2222222": "1",
-                    "3333333": "1"
-                },
-                "xxxxx": {
-                    "xx1": "1",
-                    "xx2": "1",
-                    "xx3": "1",
-                    "xx4": "1"
-                }
-            },
-            "rules": {
-                "/redirect": {
-                    "methods": {
-                        "GET": 1,
-                        "POST": 1
-                    },
-                    "event": {
-                        "passwd": "BODY.password",
-                        "username": "BODY.user"
-                    },
-                    "vars": {},
-                    "sceneRef": "data_risk_control",
-                    "action": "redirect@http://www.t.ir0.cn/302.html"
-                },
-                "/test.html": {
-                    "methods": {
-                        "GET": 1,
-                        "POST": 1
-                    },
-                    "vars": {},
-                    "action": "verify@captcha2"
-                },
-                "/test111.html": {
-                    "methods": {
-                        "GET": 1,
-                        "POST": 1
-                    },
-                    "event": {
-                        "account": "ARGS.account",
-                        "body": "BODY.body",
-                        "cookie": "COOKIE.cookie",
-                        "phone": "HEADER.phone"
-                    },
-                    "vars": {
-                        "counts": [
-                            {
-                                "name": "online_phone_1m",
-                                "uri": "/test111.html",
-                                "unit": "Event.phone",
-                                "dura": 60,
-                                "thrsd": 1,
-                                "action": "forbidden"
-                            }
-                        ]
-                    },
-                    "policy": [
-                        {
-                            "name": "new111",
-                            "script": "risk_blk_contain(blackphone,EVENT.phone) and COUNTRISK.online_phone_1m > 10 and grp_vGID_vHST_vRIP_offline_404_ratio == 0 and (grp_vGID_vHST_SUM_total_5m > 10 or grp_vGID_vHST_vRIP_SUM_total_5m > 3 or REMOTE_ADDR == '192.168.137.101')",
-                            "action": "forbidden@testfb"
-                        },
-                        {
-                            "name": "new222",
-                            "script": "risk_blk_contain(blackphone,EVENT.phone) and COUNTRISK.online_phone_1m > 10 and grp_vGID_vHST_vRIP_offline_404_ratio == 0 and (grp_vGID_vHST_SUM_total_5m > 10 or grp_vGID_vHST_vRIP_SUM_total_5m > 3 or REMOTE_ADDR == '192.168.137.101')",
-                            "action": "forbidden@testfb"
-                        }
-                    ],
-                    "action": "verify@captcha2"
-                }
-            }
+            "enable": 1
         },
         "skip": {
             "enable": 0
@@ -180,8 +88,7 @@
             "enable": 0
         },
         "risk": {
-            "enable": 0,
-            "blacklist": null
+            "enable": 0
         },
         "skip": {
             "enable": 0
