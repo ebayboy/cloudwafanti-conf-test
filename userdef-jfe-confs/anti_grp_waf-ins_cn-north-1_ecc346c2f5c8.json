@@ -9,59 +9,14 @@
                 "enable": 1,
                 "rules": [
                     {
-                        "name": "botstat1",
-                        "uri": "/vulnerabilities/xss_s/",
-                        "unit": "",
-                        "dura": 1,
-                        "thrsd": 1,
-                        "action": "notice",
-                        "script": "(HEADER.fingerExist, '') && (HEADER.fingerValid, '')"
-                    },
-                    {
-                        "name": "testbot2",
-                        "pre": {
-                            "ARGS.x_ufid == ''": "forbidden",
-                            "jfe_xsec()": "forbidden"
-                        },
-                        "uri": "/vulnerabilities/xss_s/",
-                        "unit": "",
-                        "dura": 20,
-                        "thrsd": 300,
-                        "action": "notice"
-                    },
-                    {
-                        "name": "testbot",
-                        "pre": {
-                            "ARGS.x_ufid == ''": "forbidden",
-                            "jfe_xsec()": "forbidden"
-                        },
-                        "uri": "/vulnerabilities/xss_s/",
-                        "unit": "",
-                        "dura": 1,
-                        "thrsd": 1,
-                        "action": "notice"
-                    },
-                    {
-                        "name": "test",
-                        "pre": {
-                            "ARGS.x_ufid == ''": "forbidden",
-                            "jfe_xsec()": "forbidden"
-                        },
-                        "uri": "/service/app/sites.php",
-                        "unit": "",
-                        "dura": 60,
-                        "thrsd": 5,
-                        "action": "forbidden@"
-                    },
-                    {
-                        "name": "1111",
+                        "name": "666666",
                         "uri": "/fb.html",
                         "unit": "args.xss_s",
                         "dura": 20,
                         "thrsd": 300,
                         "action": "forbidden@",
-                        "script": "contain(HEADER.user_agent, 'bot')",
-                        "ststhrst": 100,
+                        "script": "contain(HEADER.user_agent, 'bot') && bettween('Wday', 5,2 and between('Hour', 21, 10))) && between('Hour', 21, 10))",
+                        "ststhrst": 150,
                         "status": 404
                     }
                 ]
