@@ -3,14 +3,14 @@
         "CCLimit": 60000,
         "CCThreshold": 0,
         "CCTtl": 30,
-        "GroupId": "waf-ins_cn-north-1_ecc346c2f5c8",
+        "GroupId": "waf-ins_cn-north-1_7a172aa9704a",
         "Level": 0
     },
     {
         "CCLimit": 60000,
         "CCThreshold": 0,
         "CCTtl": 30,
-        "GroupId": "waf-ins_cn-north-1_7a172aa9704a",
+        "GroupId": "waf-ins_cn-north-1_ecc346c2f5c8",
         "Level": 0
     }
 ]
