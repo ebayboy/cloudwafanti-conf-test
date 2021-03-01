@@ -24,7 +24,15 @@
             }
         },
         "deny": {
-            "enable": 0
+            "enable": 1,
+            "script": {
+                "script": [
+                    {
+                        "action": "redirect@default",
+                        "sc": "prefix(URI,'/') && ipv4_contain('2.3.5.0/24', REMOTE_ADDR) && equal(GEOIP.region_name,'Heilongjiang,Liaoning') && equal(METHOD,'GET') && equal(COOKIE.cookie_key,'cookie_value') && equal(HEADER.header_key1,'header_val')"
+                    }
+                ]
+            }
         },
         "enable": 1,
         "filter": {
