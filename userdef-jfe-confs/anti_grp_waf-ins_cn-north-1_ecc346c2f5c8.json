@@ -24,7 +24,7 @@
             }
         },
         "deny": {
-            "enable": 0
+            "enable": 1
         },
         "enable": 1,
         "filter": {
