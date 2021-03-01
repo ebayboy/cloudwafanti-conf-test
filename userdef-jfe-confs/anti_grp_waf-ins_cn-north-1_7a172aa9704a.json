@@ -3,10 +3,10 @@
     "test.com": {
         "bot": {
             "eigenv": {
-                "enable": 1
+                "enable": 0
             },
             "count": {
-                "enable": 1
+                "enable": 0
             },
             "analyze": {
                 "level": "L0",
@@ -37,7 +37,51 @@
             "enable": 0
         },
         "risk": {
-            "enable": 1
+            "enable": 1,
+            "rules": {
+                "/test111": {
+                    "sceneRef": "account_login",
+                    "methods": {
+                        "POST": 1
+                    },
+                    "action": "notice"
+                },
+                "/test222": {
+                    "sceneRef": "account_login",
+                    "methods": {
+                        "POST": 1
+                    },
+                    "action": "notice"
+                },
+                "/test333": {
+                    "sceneRef": "account_login",
+                    "methods": {
+                        "POST": 1
+                    },
+                    "action": "notice"
+                },
+                "/testmid": {
+                    "sceneRef": "account_login",
+                    "methods": {
+                        "POST": 1
+                    },
+                    "action": "notice"
+                },
+                "/testmid11": {
+                    "sceneRef": "account_login",
+                    "methods": {
+                        "POST": 1
+                    },
+                    "action": "notice"
+                },
+                "/testmid22": {
+                    "sceneRef": "account_login",
+                    "methods": {
+                        "POST": 1
+                    },
+                    "action": "notice"
+                }
+            }
         },
         "skip": {
             "enable": 0

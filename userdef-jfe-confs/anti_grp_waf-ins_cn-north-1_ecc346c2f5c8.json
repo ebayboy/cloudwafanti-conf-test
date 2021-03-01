@@ -3,23 +3,10 @@
     "waf.jdtest.com": {
         "bot": {
             "eigenv": {
-                "enable": 1
+                "enable": 0
             },
             "count": {
-                "enable": 1,
-                "rules": [
-                    {
-                        "name": "666666",
-                        "uri": "/fb.html",
-                        "unit": "args.xss_s",
-                        "dura": 20,
-                        "thrsd": 300,
-                        "action": "forbidden@",
-                        "script": "contain(HEADER.user_agent, 'bot') && bettween('Wday', 5,2)) && between('Hour', 21, 10))",
-                        "ststhrst": 150,
-                        "status": 404
-                    }
-                ]
+                "enable": 0
             },
             "analyze": {
                 "level": "L0",
@@ -44,9 +31,7 @@
             "enable": 1,
             "respBody": {
                 "append": {
-                    "/service/app/sites.php": "/ZmluZ2VycHJpbnRfanM.js?t=",
                     "/test": "/ZmluZ2VycHJpbnRfanM.js?t=",
-                    "/vulnerabilities/captcha/": "/ZmluZ2VycHJpbnRfanM.js?t=",
                     "sw@/": "/ZmluZ2VycHJpbnRfanM.js?t="
                 }
             }
