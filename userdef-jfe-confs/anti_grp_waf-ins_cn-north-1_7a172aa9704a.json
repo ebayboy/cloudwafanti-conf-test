@@ -28,11 +28,11 @@
             "script": [
                 {
                     "action": "redirect@default",
-                    "sc": "prefix(URI,'/') and ipv4_contain('2.3.5.0/24', REMOTE_ADDR) and equal(GEOIP.region_name,'Heilongjiang,Liaoning') and equal(GEOIP.region_name,'Heilongjiang,Liaoning') and equal(METHOD,'GET') and equal(COOKIE.cookie_key,'cookie_value') and equal(HEADER.header_key1,'header_val')"
+                    "sc": "prefix(URI,'/') and ipv4_contain('2.3.5.0/24', REMOTE_ADDR) and equal(GEOIP.region_name,'Heilongjiang') and equal(GEOIP.region_name,'Liaoning') and equal(METHOD,'GET') and equal(COOKIE.cookie_key,'cookie_value') and equal(HEADER.header_key1,'header_val')"
                 },
                 {
                     "action": "redirect@default",
-                    "sc": "prefix(URI,'/') and ipv4_contain('2.3.5.0/24', REMOTE_ADDR) and equal(GEOIP.region_name,'Heilongjiang,Liaoning') and equal(GEOIP.region_name,'Heilongjiang,Liaoning') and equal(METHOD,'GET') and equal(COOKIE.cookie_key,'cookie_value') and equal(HEADER.header_key1,'header_val')"
+                    "sc": "prefix(URI,'/') and ipv4_contain('2.3.5.0/24', REMOTE_ADDR) and equal(GEOIP.region_name,'Heilongjiang') and equal(GEOIP.region_name,'Liaoning') and equal(METHOD,'GET') and equal(COOKIE.cookie_key,'cookie_value') and equal(HEADER.header_key1,'header_val')"
                 }
             ]
         },
